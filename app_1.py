@@ -43,7 +43,7 @@ def do_task(task_id):
 		task['title'] = content['title']
 		task['description'] = content['description']
 		task['done'] = content['done']
-		return make_response(jsonify({'status_code': 404}) 404)
+		return make_response(jsonify({'status_code': 404}), 404)
 
 	if request.method == 'PUT':
 		content = request.get_json(silent = True)
